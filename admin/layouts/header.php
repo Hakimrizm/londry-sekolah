@@ -48,7 +48,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
                 <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Pengaturan</a>
                 <ul class="dropdown-menu">
                     <li><a href="" class="dropdown-item">Pengaturan Harga</a></li>
-                    <li><a href="" class="dropdown-item">Ganti Password</a></li>
+                    <li><a href="ganti_pass.php" class="dropdown-item">Ganti Password</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a href="" class="dropdown-item"><?= $_SESSION["username"]; ?></a></li>
                 </ul>

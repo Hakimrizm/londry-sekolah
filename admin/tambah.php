@@ -24,7 +24,7 @@ if( isset($_POST["tambah"]) ) {
         <div class="col-md-5">
             <div class="card mb-3">
                 <div class="card-header text-center text-white bg-warning p-3">
-                    Tambah Pelanggan
+                    <h4>Tambah Pelanggan</h4>
                 </div>
                 <div class="card-body">
                     <form action="" method="post">

@@ -16,7 +16,7 @@ if( isset($_POST["edit"]) ) {
         <div class="col-md-5">
             <div class="card mt-3 mb-3">
                 <div class="card-header text-center p-3 bg-warning text-white">
-                    Edit data pelanggan
+                    <h4>Edit data pelanggan</h4>
                 </div>
                 <div class="card-body">
                     <form action="" method="post">
