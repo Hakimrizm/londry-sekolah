@@ -50,16 +50,6 @@ function edit($data) {
     return mysqli_affected_rows($conn);
 }
 
-function session($pesan) {
-    if( isset($_SESSION["pesan"]) ) {
-        echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-                <strong>Berhasil!</strong>, Pelanggan berhasil di". $data ."
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-            </div>";
-        unset($_SESSION["pesan"]);
-    }
-}
-
 function register($data) {
     global $conn;
 
