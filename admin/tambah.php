@@ -42,7 +42,7 @@ if( isset($_POST["tambah"]) ) {
                         </div>
                         <div class="mb-3">
                             <button type="submit" name="tambah" class="btn btn-warning text-white">Tambah</button>
-                            <a href="index.php" class="btn btn-primary">Kembali</a>
+                            <a href="pelanggan.php" class="btn btn-primary">Kembali</a>
                         </div>
                     </form>
                 </div>

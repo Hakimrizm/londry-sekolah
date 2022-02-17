@@ -35,7 +35,7 @@ if( isset($_POST["edit"]) ) {
                         </div>
                         <div class="mb-3 justify-content-be">
                             <button type="submit" class="btn btn-warning text-white" name="edit">Edit pelanggan</button>
-                            <a href="index.php" class="btn btn-primary">Kembali</a>
+                            <a href="pelanggan.php" class="btn btn-primary">Kembali</a>
                         </div>
                     </form>
                 </div>

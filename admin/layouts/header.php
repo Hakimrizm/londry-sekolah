@@ -36,7 +36,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
                 <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pelanggan</a>
+                <a class="nav-link" href="pelanggan.php">Pelanggan</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Transaksi</a>
