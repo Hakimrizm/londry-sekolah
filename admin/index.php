@@ -16,6 +16,7 @@
                 </div>
             <?php unset($_SESSION["pesan"]); ?>
             <?php endif; ?>
+            <h4 class="text-end"><span class="waktu"></span> <?= $_SESSION["username"]; ?>!</h4>
         </div>
     </div>
 </div>

@@ -1,10 +1,13 @@
 const time = new Date().getHours();
-let string = '';
+let str = '';
 
 if( time < 12 ) {
-    string += 'Good morning!';
+    str += 'Selamat Pagi';
 }else if( time < 18 ) {
-    string += 'Good afternoon!';
+    str += 'Selamat Siang';
 }else {
-    string += 'Good evening!';
+    str += 'Selamat Malam';
 }
+
+const waktu = document.querySelector('.waktu');
+waktu.innerHTML = str;

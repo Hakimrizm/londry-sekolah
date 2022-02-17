@@ -1,7 +1,7 @@
 <?php include 'layouts/header.php'; ?>
 
 <div class="container">
-    <div class="panel bg-light p-3 mt-3 mb-3">
+    <div class="panel bg-light p-4 mt-3 mb-3 shadow-sm">
         <div class="panel-heading">
             <h4>Data Pelanggan</h4>
         </div>
