@@ -50,6 +50,40 @@ function edit($data) {
     return mysqli_affected_rows($conn);
 }
 
+function gantiPass($data) {
+    global $conn;
+
+    $username = $data["username"];
+    $passwordLama = $data["password"];
+    $passwordBaru = $data["passwordBaru"];
+    $password2 = $data["password2"];
+
+    if( $passwordBaru != $password2 ) {
+        echo "<script>alert('Konfirmasi password tidak sesuai!');</script>";
+        return false;
+    }
+
+    $result = mysqli_query($conn, "SELECT * FROM admin WHERE username='$username'");
+
+    if( mysqli_num_rows($result) === 1 ) {
+        $row = mysqli_fetch_assoc($result);
+        if( password_verify($passwordLama, $row["password"]) ) {
+
+            $passwordBaru = password_hash($passwordBaru, PASSWORD_DEFAULT);
+            $query = "UPDATE admin SET
+                        password='$passwordBaru'
+                        WHERE username='$username'";
+            mysqli_query($conn, $query);
+
+        }else {
+            echo "<script>alert('Password lama salah!')</script>";
+            return false;
+        }
+    }
+
+    return mysqli_affected_rows($conn);
+}
+
 function register($data) {
     global $conn;
 
