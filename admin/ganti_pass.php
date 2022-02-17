@@ -2,7 +2,7 @@
 
 if( isset($_POST["ganti"]) ) {
     if( gantiPass($_POST) > 0 ) {
-        echo "<script>alert('Password berhasil diubah!');</script>"
+        echo "<script>alert('Password berhasil diubah!');</script>";
     }else {
         echo "<script>alert('Password gagal diubah!');</script>";
     }

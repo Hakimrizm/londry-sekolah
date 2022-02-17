@@ -33,10 +33,10 @@ $pelanggan = query("SELECT * FROM pelanggan");
         <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php">Dashboard</a>
+                <a class="nav-link <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/index.php" ? "active" : ""); ?>" aria-current="page" href="index.php">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="pelanggan.php">Pelanggan</a>
+                <a class="nav-link <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/pelanggan.php" ? "active" : ""); ?>" href="pelanggan.php">Pelanggan</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Transaksi</a>
@@ -48,7 +48,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
                 <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Pengaturan</a>
                 <ul class="dropdown-menu">
                     <li><a href="" class="dropdown-item">Pengaturan Harga</a></li>
-                    <li><a href="ganti_pass.php" class="dropdown-item">Ganti Password</a></li>
+                    <li><a href="ganti_pass.php" class="dropdown-item <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/ganti_pass.php" ? "active" : ""); ?>">Ganti Password</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a href="" class="dropdown-item"><?= $_SESSION["username"]; ?></a></li>
                 </ul>
