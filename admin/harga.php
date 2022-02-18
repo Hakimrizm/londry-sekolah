@@ -1,4 +1,14 @@
-<?php include 'layouts/header.php'; ?>
+<?php include 'layouts/header.php';
+
+if( isset($_POST["ubahHarga"]) ) {
+    if( ubahHarga($_POST) > 0 ) {
+        echo "<script>alert('Harga berhasil diubah!')</script>";
+    }else {
+        echo "<script>alert('Harga gagal diubah!')</script>";
+    }
+}
+
+?>
 
 <div class="container">
 
@@ -15,7 +25,7 @@
                         <input type="number" class="form-control" name="harga_per_kilo" value="<?= $x["harga_per_kilo"]; ?>">
                     </div>
                     <div class="mb-3">
-                        <button type="button" name="" class="btn btn-warning text-white">Ubah Harga</button>
+                        <button type="submit" name="ubahHarga" class="btn btn-warning text-white">Ubah Harga</button>
                         <a href="pelanggan.php" class="btn btn-primary">Kembali</a>
                     </div>
                 </form>

@@ -39,7 +39,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
                 <a class="nav-link <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/pelanggan.php" ? "active" : ""); ?>" href="pelanggan.php">Pelanggan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Transaksi</a>
+                <a class="nav-link <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/transaksi.php" ? "active" : ""); ?>" href="transaksi.php">Transaksi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Laporan</a>

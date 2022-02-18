@@ -84,6 +84,18 @@ function gantiPass($data) {
     return mysqli_affected_rows($conn);
 }
 
+function ubahHarga($data) {
+    global $conn;
+
+    $harga = $data["harga_per_kilo"];
+
+    $query = "UPDATE harga SET harga_per_kilo = $harga";
+
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
+
 function register($data) {
     global $conn;
 
