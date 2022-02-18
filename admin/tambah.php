@@ -30,15 +30,15 @@ if( isset($_POST["tambah"]) ) {
                     <form action="" method="post">
                         <div class="mb-3">
                             <label class="form-label">Nama:</label>
-                            <input type="text" name="pelanggan_nama" class="form-control" required autocomplete="off">
+                            <input type="text" name="pelanggan_nama" class="form-control" required autocomplete="off" placeholder="Nama ..">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">No Hp:</label>
-                            <input type="text" class="form-control" name="pelanggan_hp" required autocomplete="off">
+                            <input type="text" class="form-control" name="pelanggan_hp" required autocomplete="off" placeholder="No Hp ..">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Alamat:</label>
-                            <input type="text" class="form-control" name="pelanggan_alamat" required autocomplete="off">
+                            <input type="text" class="form-control" name="pelanggan_alamat" required autocomplete="off" placeholder="Alamat ..">
                         </div>
                         <div class="mb-3">
                             <button type="submit" name="tambah" class="btn btn-warning text-white">Tambah</button>
