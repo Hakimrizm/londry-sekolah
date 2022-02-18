@@ -47,7 +47,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
             <li class="nav-item dropdown">
                 <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Pengaturan</a>
                 <ul class="dropdown-menu">
-                    <li><a href="" class="dropdown-item">Pengaturan Harga</a></li>
+                    <li><a href="harga.php" class="dropdown-item <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/harga.php" ? "active" : ""); ?>">Pengaturan Harga</a></li>
                     <li><a href="ganti_pass.php" class="dropdown-item <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/ganti_pass.php" ? "active" : ""); ?>">Ganti Password</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a href="" class="dropdown-item"><?= $_SESSION["username"]; ?></a></li>
