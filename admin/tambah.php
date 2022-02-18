@@ -1,13 +1,7 @@
 <?php include 'layouts/header.php';
 
-// include '../function/functions.php';
-
 if( isset($_POST["tambah"]) ) {
     if( tambah($_POST) > 0 ) {
-        // echo "<script>alert('Pelanggan baru berhasil ditambahkan!');
-        //     document.location.href = 'index.php';
-        // </script>";
-        // session('diubah');
         $_SESSION["pesan"] = 'diubah';
         header("Location: index.php");
     }else {

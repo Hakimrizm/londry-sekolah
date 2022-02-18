@@ -7,7 +7,7 @@
         <h4>Daftar Transaksi Laundry</h4>
     </div>
     <div class="panel-body">
-        <a href="#" class="btn btn-warning text-white mb-3">Tambah Transaksi</a>
+        <a href="transaksi_tambah.php" class="btn btn-warning text-white mb-3">Tambah Transaksi</a>
         <table class="table table-bordered table-striped">
             <tr>
                 <th width="1%">No</th>
@@ -20,23 +20,35 @@
                 <th>Status</th>
                 <th width="20%">OPSI</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>INVOICE-1</td>
-                <td>2021-11-05</td>
-                <td>Sasha Brouse</td>
-                <td>3</td>
-                <td>2021-11-08</td>
-                <td>Rp. 45,000,-</td>
-                <td>
-                    <div class="badge bg-warning rounded-pill">PROSES</div>
-                </td>
-                <td>
-                    <a href="#" class="btn btn-warning text-white">Invoice</a>
-                    <a href="#" class="btn btn-primary">Edit</a>
-                    <a href="#" class="btn btn-danger">Batalkan</a>
-                </td>
-            </tr>
+            <?php $result = query("SELECT * FROM pelanggan,transaksi WHERE transaksi_pelanggan = pelanggan_id ORDER BY transaksi_id DESC"); $i = 1; ?>
+            <?php foreach( $result as $data ): ?>
+                <tr>
+                    <td><?= $i; ?></td>
+                    <td>INVOICE-<?= $data["transaksi_id"]; ?></td>
+                    <td><?= $data["transaksi_tanggal"]; ?></td>
+                    <td><?= $data["pelanggan_nama"]; ?></td>
+                    <td>3</td>
+                    <td><?= $data["tansaksi_tgl_selesai"]; ?></td>
+                    <td>Rp. <?= .number_format($data["transaksi_harga"]); ?></td>
+                    <td>
+                        <?php
+                            if( $data["transaksi_status"] == "0" ) {
+                                echo "<div class='label label-warning'>PROSES</div>";
+                            }else if( $data["transaksi_status"] == "1" ) {
+                                echo "<div class='label label-warning'>DICUCI</div>";
+                            }else if( $data["transaksi_status"] == "2" ) {
+                                echo "<div class='label label-warning'>DICUCI</div>";
+                            }
+                        ?>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-warning text-white">Invoice</a>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-danger">Batalkan</a>
+                    </td>
+                </tr>
+            <?php $i++; ?>
+            <?php endforeach; ?>
         </table>
     </div>
 </div>

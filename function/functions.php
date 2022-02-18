@@ -96,6 +96,12 @@ function ubahHarga($data) {
     return mysqli_affected_rows($conn);
 }
 
+function tambahTransaksi($data) {
+    global $conn;
+
+    
+}
+
 function register($data) {
     global $conn;
 
