@@ -19,7 +19,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
     <link rel="stylesheet" href="../assets/bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="../public/css/style.css">
-    <title>Document</title>
+    <title>Londry</title>
 </head>
 <body>
 
