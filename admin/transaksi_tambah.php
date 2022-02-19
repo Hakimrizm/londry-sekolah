@@ -1,10 +1,11 @@
 <?php include 'layouts/header.php';
 
 if( isset($_POST["simpan"]) ) {
-    if( tambahTransaksi($_POST) > 0 ) {
-        echo "Transaksi Berhasil ditambah!";
+    if( tambahT($_POST) > 0 ) {
+        $_SESSION["pesanT"] = 'Tambah transaksi berhasil ditambahkan';
+        header("Location: transaksi.php");
     }else {
-        echo "Transaksi Gagal ditambahkan!";
+        echo "Gagal!";
     }
 }
 
@@ -20,7 +21,7 @@ if( isset($_POST["simpan"]) ) {
                 <form action="" method="post">
                     <div class="mb-3">
                         <label for="pilih" class="form-label">Pilih Pelanggan</label>
-                        <select name="pelanggan_nama" id="pilih" class="form-select">
+                        <select name="pelanggan" id="pilih" class="form-select">
                             <option value="" selected>Pilih Pelanggan</option>
                             <?php foreach( $pelanggan as $row ): ?>
                                 <option value="<?= $row["pelanggan_id"]; ?>"><?= $row["pelanggan_nama"]; ?></option>

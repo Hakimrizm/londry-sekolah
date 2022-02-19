@@ -96,28 +96,34 @@ function ubahHarga($data) {
     return mysqli_affected_rows($conn);
 }
 
-function tambahTransaksi($data) {
+function tambahT($data) {
     global $conn;
 
-    $pelanggan = $data["pelanggan_nama"];
+    $pelanggan = $data["pelanggan"];
     $berat = $data["transaksi_berat"];
     $tgl_selesai = $data["transaksi_tgl_selesai"];
-
-    $tgl_hari_ini = date("Y-m-d");
+    $tanggal_hari_ini = date("Y-m-d");
     $status = 0;
 
     $result = mysqli_query($conn, "SELECT * FROM harga");
-    $row = mysqli_fetch_assoc($result);
+    $harga_per_kilo = mysqli_fetch_assoc($result);
 
-    // Mengkali kan harga dengan berat
-    $harga = $berat * $row["harga_per_kilo"];
+    $harga = $berat * $harga_per_kilo["harga_per_kilo"];
 
-    foreach($_POST["pakaian_jenis"] as $pakaian) {
+    mysqli_query($conn, "INSERT INTO transaksi VALUES('', '$tanggal_hari_ini', $pelanggan, $harga, $berat, '$tgl_selesai', $status)");
+
+    $id_terakhir = mysqli_insert_id($conn);
+    $pakaian_jenis = $data["pakaian_jenis"];
+    $pakaian_jumlah = $data["pakaian_jumlah"];
+    $i = 0;
+    foreach( $pakaian_jenis as $pakaian ) {
         if( $pakaian != "" ) {
-            var_dump($pakaian);
+            mysqli_query($conn, "INSERT INTO pakaian VALUES ('','$id_terakhir', '$pakaian', '$pakaian_jumlah[$i]')");
         }
+        $i++;
     }
-    die;
+
+    return mysqli_affected_rows($conn);
 }
 
 function register($data) {

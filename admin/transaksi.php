@@ -8,6 +8,13 @@
     </div>
     <div class="panel-body">
         <a href="transaksi_tambah.php" class="btn btn-warning text-white mb-3">Tambah Transaksi</a>
+        <?php if( isset($_SESSION["pesanT"]) ): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Berhasil!</strong>, <?= $_SESSION["pesanT"]; ?>!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php unset($_SESSION["pesanT"]); ?>
+            <?php endif; ?>
         <table class="table table-bordered table-striped">
             <tr>
                 <th width="1%">No</th>
@@ -25,19 +32,19 @@
                 <tr>
                     <td><?= $i; ?></td>
                     <td>INVOICE-<?= $data["transaksi_id"]; ?></td>
-                    <td><?= $data["transaksi_tanggal"]; ?></td>
+                    <td><?= $data["transaksi_tgl"]; ?></td>
                     <td><?= $data["pelanggan_nama"]; ?></td>
-                    <td>3</td>
-                    <td><?= $data["tansaksi_tgl_selesai"]; ?></td>
-                    <td>Rp. <?= .number_format($data["transaksi_harga"]); ?></td>
+                    <td><?= $data["transaksi_berat"]; ?>Kg</td>
+                    <td><?= $data["transaksi_tgl_selesai"]; ?></td>
+                    <td>Rp. <?= number_format($data["transaksi_harga"]); ?></td>
                     <td>
                         <?php
                             if( $data["transaksi_status"] == "0" ) {
-                                echo "<div class='label label-warning'>PROSES</div>";
+                                echo "<div class='badge bg-warning'>PROSES</div>";
                             }else if( $data["transaksi_status"] == "1" ) {
-                                echo "<div class='label label-warning'>DICUCI</div>";
+                                echo "<div class='badge bg-warning'>DICUCI</div>";
                             }else if( $data["transaksi_status"] == "2" ) {
-                                echo "<div class='label label-warning'>DICUCI</div>";
+                                echo "<div class='badge bg-warning'>DICUCI</div>";
                             }
                         ?>
                     </td>
