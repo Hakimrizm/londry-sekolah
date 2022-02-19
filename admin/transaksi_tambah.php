@@ -1,11 +1,11 @@
 <?php include 'layouts/header.php';
 
 if( isset($_POST["simpan"]) ) {
-    // if( tambahTransaksi($_POST) > 0 ) {
-    //     echo "Transaksi Berhasil ditambah!";
-    // }else {
-    //     echo "Transaksi Gagal ditambahkan!";
-    // }
+    if( tambahTransaksi($_POST) > 0 ) {
+        echo "Transaksi Berhasil ditambah!";
+    }else {
+        echo "Transaksi Gagal ditambahkan!";
+    }
 }
 
 ?>

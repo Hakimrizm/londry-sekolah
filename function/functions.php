@@ -99,7 +99,25 @@ function ubahHarga($data) {
 function tambahTransaksi($data) {
     global $conn;
 
-    
+    $pelanggan = $data["pelanggan_nama"];
+    $berat = $data["transaksi_berat"];
+    $tgl_selesai = $data["transaksi_tgl_selesai"];
+
+    $tgl_hari_ini = date("Y-m-d");
+    $status = 0;
+
+    $result = mysqli_query($conn, "SELECT * FROM harga");
+    $row = mysqli_fetch_assoc($result);
+
+    // Mengkali kan harga dengan berat
+    $harga = $berat * $row["harga_per_kilo"];
+
+    foreach($_POST["pakaian_jenis"] as $pakaian) {
+        if( $pakaian != "" ) {
+            var_dump($pakaian);
+        }
+    }
+    die;
 }
 
 function register($data) {
