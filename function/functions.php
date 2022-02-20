@@ -32,6 +32,14 @@ function hapus($id) {
     return mysqli_affected_rows($conn);
 }
 
+function hapusTransaksi($id) {
+    global $conn;
+
+    mysqli_query($conn, "DELETE FROM transaksi WHERE transaksi_id=$id");
+    mysqli_query($conn, "DELETE FROM pakaian WHERE pakaian_transaksi=$id");
+    return mysqli_affected_rows($conn);
+}
+
 function edit($data) {
     global $conn;
 

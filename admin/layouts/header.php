@@ -42,7 +42,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
                 <a class="nav-link <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/transaksi.php" ? "active" : ""); ?>" href="transaksi.php">Transaksi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Laporan</a>
+                <a class="nav-link <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/laporan.php" ? "active" : ""); ?>" href="laporan.php" >Laporan</a>
             </li>
             <li class="nav-item dropdown">
                 <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Pengaturan</a>

@@ -55,7 +55,7 @@ if( isset($_POST["edit_transaksi"]) ) {
 
                             <?php foreach( $pakaian as $p ): ?>
                                 <tr>
-                                    <td><input type="text" class="from-control" name="pakaian_jenis[]" value="<?= $p["pakaian_jenis"]; ?>"></td>
+                                    <td><input type="text" class="form-control" name="pakaian_jenis[]" value="<?= $p["pakaian_jenis"]; ?>"></td>
                                     <td><input type="number" class="form-control" name="pakaian_jumlah[]" value="<?= $p["pakaian_jumlah"]; ?>"></td>
                                 </tr>
                             <?php endforeach; ?>

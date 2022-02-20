@@ -115,9 +115,9 @@ $data = query("SELECT * FROM transaksi,pelanggan WHERE transaksi_id=$id AND tran
     </div>
 </div>
 
-<script >
-    const cetak = document.querySelector('.cetak');
-    cetak.addEventListener('click', function(){
+<script>
+    const print = document.querySelector('.cetak');
+    print.addEventListener('click', function(){
         window.print();
     });
 </script>
