@@ -49,7 +49,7 @@
                         ?>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-warning text-white">Invoice</a>
+                        <a href="transaksi_invoice.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-warning text-white" target="_blank">Invoice</a>
                         <a href="transaksi_edit.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-primary">Edit</a>
                         <a href="#" class="btn btn-danger">Batalkan</a>
                     </td>

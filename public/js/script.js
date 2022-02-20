@@ -11,3 +11,5 @@ if( time < 12 ) {
 
 const waktu = document.querySelector('.waktu');
 waktu.innerHTML = str;
+
+console.log('OK!');
