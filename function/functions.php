@@ -126,6 +126,41 @@ function tambahT($data) {
     return mysqli_affected_rows($conn);
 }
 
+function editTransaksi($data) {
+    global $conn;
+
+    $id = $data["id"];
+    $pelanggan = $data["pelanggan"];
+    $berat = $data["transaksi_berat"];
+    $tgl_selesai = $data["transaksi_tgl_selesai"];
+    $status = $data["status"];
+
+    $result = mysqli_query($conn, "SELECT * FROM harga");
+    $harga_per_kilo = mysqli_fetch_assoc($result);
+    $harga = $berat * $harga_per_kilo["harga_per_kilo"];
+
+    mysqli_query($conn, "UPDATE transaksi SET
+                    transaksi_pelanggan = $pelanggan,
+                    transaksi_harga = $harga,
+                    transaksi_berat = $berat,
+                    transaksi_tgl_selesai = '$tgl_selesai',
+                    transaksi_status = $status
+                    WHERE transaksi_id = $id");
+    
+    $pakaian_jenis = $data["pakaian_jenis"];
+    $pakaian_jumlah = $data["pakaian_jumlah"];
+    mysqli_query($conn, "DELETE FROM pakaian WHERE pakaian_transaksi=$id");
+    $i = 0;
+    foreach( $pakaian_jenis as $pakaian ) {
+        if( $pakaian != "" ) {
+            mysqli_query($conn, "INSERT INTO pakaian VALUES('', $id, '$pakaian', $pakaian_jumlah[$i])");
+        }
+        $i++;
+    }
+
+    return mysqli_affected_rows($conn);
+}
+
 function register($data) {
     global $conn;
 

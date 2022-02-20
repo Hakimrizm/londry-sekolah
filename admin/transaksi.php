@@ -42,15 +42,15 @@
                             if( $data["transaksi_status"] == "0" ) {
                                 echo "<div class='badge bg-warning'>PROSES</div>";
                             }else if( $data["transaksi_status"] == "1" ) {
-                                echo "<div class='badge bg-warning'>DICUCI</div>";
+                                echo "<div class='badge bg-info'>DICUCI</div>";
                             }else if( $data["transaksi_status"] == "2" ) {
-                                echo "<div class='badge bg-warning'>DICUCI</div>";
+                                echo "<div class='badge bg-success'>SELESAI</div>";
                             }
                         ?>
                     </td>
                     <td>
                         <a href="#" class="btn btn-warning text-white">Invoice</a>
-                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="transaksi_edit.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-primary">Edit</a>
                         <a href="#" class="btn btn-danger">Batalkan</a>
                     </td>
                 </tr>
