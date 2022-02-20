@@ -1,13 +1,18 @@
 <?php include 'layouts/header.php'; ?>
 
 <div class="container">
-    <div class="panel bg-light p-4 mt-3 mb-3 shadow-sm">
-        <div class="panel-heading">
-            <h4>Data Pelanggan</h4>
-        </div>
-        <div class="panel-body">
-            <a href="tambah.php" class="btn btn-sm btn-success mb-3">Tambah</a>
-            <table class="table table-striped shadow-sm">
+    <div class="card bg-light mt-3 mb-3 shadow-sm">
+        <div class="card-body">
+            <h4 class="card-title">Data Pelanggan</h4>
+            <a href="tambah.php" class="btn btn-sm btn-warning text-white mb-3">Tambah</a>
+            <?php if( isset($_SESSION["pesan"]) ): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Berhasil!</strong>, Pelanggan berhasil di<?= $_SESSION["pesan"]; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php unset($_SESSION["pesan"]); ?>
+            <?php endif; ?>
+            <table class="table table-stiped shadow-sm table-hover bg-light">
                 <thead>
                     <tr>
                         <th scope="col">No.</th>

@@ -20,6 +20,9 @@ $pelanggan = query("SELECT * FROM pelanggan");
     <!-- My CSS -->
     <link rel="stylesheet" href="../public/css/style.css">
     <title>Londry</title>
+    <style>
+        <?php include '../public/css/style.css'; ?>
+    </style>
 </head>
 <body>
 

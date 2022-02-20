@@ -1,11 +1,11 @@
 <?php include 'layouts/header.php'; ?>
 
 <div class="container">
-    <div class="panel bg-light p-4 mt-3 mb-3">
-        <div class="panel-heading">
+    <div class="card bg-light mt-3 mb-3">
+        <div class="card-heading p-4">
             <h4>Filter Laporan</h4>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
 
             <form action="laporan_cetak.php" method="get">
                 <table class="table table-bordered table-striped">
@@ -23,14 +23,6 @@
             </form>
         </div>
     </div>
-    <?php if( isset($_GET["tgl_dari"]) && isset($_GET["tgl_sampai"]) ): ?>
-        <?php $dari = $_GET["tgl_dari"]; $sampai = $_GET["tgl_sampai"]; ?>
-        <div class="panel bg-light p-4 mb-3">
-            <div class="panel-heading">
-                <h4 class="text-center">Data laporan londry dari <?= $dari; ?> sampai <?= $sampai; ?></h4>
-            </div>
-        </div>
-    <?php endif; ?>
 </div>
 
 <?php include 'layouts/footer.php'; ?>

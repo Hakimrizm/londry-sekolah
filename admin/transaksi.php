@@ -2,11 +2,9 @@
 
 <div class="container">
 
-<div class="panel bg-light p-4 mb-3 mt-3 shadow-sm">
-    <div class="panel-heading">
-        <h4>Daftar Transaksi Laundry</h4>
-    </div>
-    <div class="panel-body">
+<div class="card bg-light mb-3 mt-3 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title">Daftar Transaksi Laundry</h4>
         <a href="transaksi_tambah.php" class="btn btn-warning text-white mb-3">Tambah Transaksi</a>
         <?php if( isset($_SESSION["pesanT"]) ): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
