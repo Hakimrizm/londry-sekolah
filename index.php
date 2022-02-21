@@ -16,7 +16,7 @@
     <div class="row justify-content-center py-5">
         <div class="col-md-5">
             <div class="card">
-                <div class="card-header mb-0 bg-warning">
+                <div class="card-header mb-0" style="background-color: #6fb3b8;">
                     <h2 class="text-center" style="color: white;">Login</h2>
                 </div>
                 <div class="card-body">
@@ -48,7 +48,7 @@
                             <label for="rememberme" class="form-label">Remember Me</label>
                         </div>
 
-                        <button type="submit" name="login" class="btn btn-warning" style="color: white;">Login</button>
+                        <button type="submit" name="login" class="btn" style="color: white; background-color: #6fb3b8;">Login</button>
                     </form>
                 </div>
             </div>

@@ -5,7 +5,7 @@
 <div class="card bg-light mb-3 mt-3 shadow-sm">
     <div class="card-body">
         <h4 class="card-title">Daftar Transaksi Laundry</h4>
-        <a href="transaksi_tambah.php" class="btn btn-warning text-white mb-3">Tambah Transaksi</a>
+        <a href="transaksi_tambah.php" class="btn btn-primary text-white mb-3">Tambah Transaksi</a>
         <?php if( isset($_SESSION["pesanT"]) ): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Berhasil!</strong>, <?= $_SESSION["pesanT"]; ?>!
@@ -47,7 +47,7 @@
                         ?>
                     </td>
                     <td>
-                        <a href="transaksi_invoice.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-warning text-white" target="_blank">Invoice</a>
+                        <a href="transaksi_invoice.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-info text-white" target="_blank">Invoice</a>
                         <a href="transaksi_edit.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-primary">Edit</a>
                         <a href="transaksi_hapus.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-danger">Batalkan</a>
                     </td>

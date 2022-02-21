@@ -4,7 +4,7 @@
     <div class="card bg-light mt-3 mb-3 shadow-sm">
         <div class="card-body">
             <h4 class="card-title">Data Pelanggan</h4>
-            <a href="tambah.php" class="btn btn-sm btn-warning text-white mb-3">Tambah</a>
+            <a href="tambah.php" class="btn btn-sm btn-primary mb-3">Tambah</a>
             <?php if( isset($_SESSION["pesan"]) ): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Berhasil!</strong>, Pelanggan berhasil di<?= $_SESSION["pesan"]; ?>
@@ -31,8 +31,8 @@
                             <td><?= $row["pelanggan_hp"]; ?></td>
                             <td><?= $row["pelanggan_alamat"]; ?></td>
                             <td>
-                                <a href="edit.php?id=<?= $row["pelanggan_id"]; ?>" class="btn btn-sm btn-warning text-white">Edit</a> |
-                                <a href="hapus.php?id=<?= $row["pelanggan_id"]; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin?');">Hapus</a>
+                                <a href="edit.php?id=<?= $row["pelanggan_id"]; ?>" class="btn btn-sm text-white" style="background-color: rgb(96,165,170);">Edit</a> |
+                                <a href="hapus.php?id=<?= $row["pelanggan_id"]; ?>" class="btn btn-sm btn-info text-white"onclick="return confirm('Apakah anda yakin?');">Hapus</a>
                             </td>
                         </tr>
                     <?php $i++; ?>

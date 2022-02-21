@@ -17,7 +17,7 @@
                     <tr>
                         <td><input type="date" name="tgl_dari" class="form-control"></td>
                         <td><input type="date" name="tgl_sampai" class="form-control"></td>
-                        <td><button type="submit" class="btn btn-warning text-white">Filter</button></td>
+                        <td><button type="submit" class="btn btn-primary text-white">Filter</button></td>
                     </tr>
                 </table>
             </form>

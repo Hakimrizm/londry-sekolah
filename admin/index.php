@@ -1,7 +1,7 @@
 <?php include 'layouts/header.php'; ?>
 
 <div class="container mt-3">
-    <div class="alert alert-warning text-center shadow-sm" role="alert">
+    <div class="alert text-center shadow-sm" style="background-color: #6fb3b8;" role="alert">
         <h4>Selamat datang di project Loundry Saya!</h4>
     </div>
 
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <div class="card shadow-sm" style="background-color: #fff3cd;">
+            <div class="card shadow-sm" style="background-color: #c2edce;">
                 <div class="card-body">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, officia unde animi inventore nisi doloremque delectus</p>
                 </div>

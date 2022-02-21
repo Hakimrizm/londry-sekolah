@@ -1,5 +1,9 @@
 body {
-    background-color: #eaeaea;
+    background-color: #f6f6f2;
+}
+
+nav {
+    background-color: #3880b7;
 }
 
 .img-thumbnail {
@@ -9,4 +13,8 @@ body {
 .img {
     display: flex;
     justify-content: end;
+}
+
+footer {
+    background-color: #3880b7;
 }
