@@ -27,8 +27,8 @@ if( isset($_POST["ubahHarga"]) ) {
                                 <input type="number" class="form-control" name="harga_per_kilo" value="<?= $x["harga_per_kilo"]; ?>">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="ubahHarga" class="btn btn-warning text-white">Ubah Harga</button>
-                                <a href="pelanggan.php" class="btn btn-primary">Kembali</a>
+                                <button type="submit" name="ubahHarga" class="btn btn-primary">Ubah Harga</button>
+                                <a href="pelanggan.php" class="btn btn-info text-white">Kembali</a>
                             </div>
                         </form>
                     <?php endforeach; ?>
