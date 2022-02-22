@@ -53,7 +53,13 @@ $pelanggan = query("SELECT * FROM pelanggan");
                     <li><a href="harga.php" class="dropdown-item <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/harga.php" ? "active" : ""); ?>">Pengaturan Harga</a></li>
                     <li><a href="ganti_pass.php" class="dropdown-item <?= ($_SERVER["PHP_SELF"] == "/londry_project/admin/ganti_pass.php" ? "active" : ""); ?>">Ganti Password</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a href="" class="dropdown-item"><?= $_SESSION["username"]; ?></a></li>
+                    <li><a href="" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                        <?= $_SESSION["username"]; ?>
+                    </a></li>
                 </ul>
             </li>
             
