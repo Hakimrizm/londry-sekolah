@@ -6,7 +6,7 @@ $p = query("SELECT * FROM pelanggan WHERE pelanggan_id = $id");
 if( isset($_POST["edit"]) ) {
     if( edit($_POST) > 0 ) {
         $_SESSION["pesan"] = "ubah!";
-        header("Location: index.php");
+        header("Location: pelanggan.php");
     }
 }
 
@@ -15,7 +15,7 @@ if( isset($_POST["edit"]) ) {
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card mt-3 mb-3">
-                <div class="card-header text-center p-3 bg-warning text-white">
+                <div class="card-header text-center p-3 text-white" style="background-color: #6fb3b8;">
                     <h4>Edit data pelanggan</h4>
                 </div>
                 <div class="card-body">
@@ -34,7 +34,7 @@ if( isset($_POST["edit"]) ) {
                             <input type="text" class="form-control" name="pelanggan_alamat" value="<?= $p[0]["pelanggan_alamat"] ?>" id="alamat" autocomplete="off" placeholder="Alamat ..">
                         </div>
                         <div class="mb-3 justify-content-be">
-                            <button type="submit" class="btn btn-warning text-white" name="edit">Edit pelanggan</button>
+                            <button type="submit" class="btn btn-success" name="edit">Edit pelanggan</button>
                             <a href="pelanggan.php" class="btn btn-primary">Kembali</a>
                         </div>
                     </form>

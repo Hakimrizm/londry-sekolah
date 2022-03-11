@@ -1,18 +1,49 @@
 <?php include 'layouts/header.php'; ?>
 
 <div class="container">
-    <div class="card bg-light mt-3 mb-3 shadow-sm">
+
+    <!-- Judul -->
+    <div class="row">
+        <div class="col">
+            <h3 class="mt-3 mb-3">Data Pelanggan</h3>
+        </div>
+    </div>
+    <!-- Akhir Judul -->
+
+    <!-- Opsi Tambah dan Cari -->
+    <div class="card mb-3">
         <div class="card-body">
-            <h4 class="card-title">Data Pelanggan</h4>
-            <a href="tambah.php" class="btn btn-sm btn-primary mb-3">Tambah</a>
-            <?php if( isset($_SESSION["pesan"]) ): ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Berhasil!</strong>, Pelanggan berhasil di<?= $_SESSION["pesan"]; ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <div class="row">
+                <div class="col-6">
+                    <form action="" method="post">
+                        <input type="text" placeholder="Cari" class="form-control">
+                    </form>
+                    </div>
+                <div class="col-6">
+                    <div class="d-flex flex-row-reverse">
+                        <a href="tambah.php" class="btn btn-primary">
+                        Tambah
+                        </a>
+                    </div>
                 </div>
-            <?php unset($_SESSION["pesan"]); ?>
-            <?php endif; ?>
-            <table class="table table-stiped shadow-sm table-hover bg-light">
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Opsi -->
+
+    <!-- Jika Berhasil -->
+    <?php if( isset($_SESSION['pesan']) ): ?>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong><?= $_SESSION['pesan']; ?></strong> Data berhasil diubah!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php unset($_SESSION['pesan']); ?>
+    <?php endif; ?>
+    <!-- Berhasil -->
+
+    <div class="card mt-3 mb-3 shadow-sm">
+        <div class="card-body">
+            <table class="table table-stiped table-hover">
                 <thead>
                     <tr>
                         <th scope="col">No.</th>

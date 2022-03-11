@@ -3,7 +3,7 @@
 if( isset($_POST["tambah"]) ) {
     if( tambah($_POST) > 0 ) {
         $_SESSION["pesan"] = 'diubah';
-        header("Location: index.php");
+        header("Location: pelanggan.php");
     }else {
         echo "<script>alert('Pelanggan baru gagal ditambahkan!');</script>";
         header("Location: index.php");
@@ -17,7 +17,7 @@ if( isset($_POST["tambah"]) ) {
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card mb-3">
-                <div class="card-header text-center text-white bg-warning p-3">
+                <div class="card-header text-center text-white p-3" style="background-color: #6fb3b8;">
                     <h4>Tambah Pelanggan</h4>
                 </div>
                 <div class="card-body">
@@ -35,7 +35,7 @@ if( isset($_POST["tambah"]) ) {
                             <input type="text" class="form-control" name="pelanggan_alamat" required autocomplete="off" placeholder="Alamat ..">
                         </div>
                         <div class="mb-3">
-                            <button type="submit" name="tambah" class="btn btn-warning text-white">Tambah</button>
+                            <button type="submit" name="tambah" class="btn btn-success">Tambah</button>
                             <a href="pelanggan.php" class="btn btn-primary">Kembali</a>
                         </div>
                     </form>

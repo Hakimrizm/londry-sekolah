@@ -5,7 +5,7 @@ $id = $_GET["id"];
 
 if( hapus($id) > 0 ) {
     echo "<script>alert('Pelanggan berhasil dihapus!');
-        document.location.href = 'index.php';
+        document.location.href = 'pelanggan.php';
     </script>";
 }else {
     echo "<script>alert('Pelanggan gagal dihapus!');</script>";
