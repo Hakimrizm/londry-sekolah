@@ -66,6 +66,7 @@ function gantiPass($data) {
     $passwordBaru = $data["passwordBaru"];
     $password2 = $data["password2"];
 
+    // Jika password baru dan konfirmasi password tidak sesuai maka lakukan ini
     if( $passwordBaru != $password2 ) {
         echo "<script>alert('Konfirmasi password tidak sesuai!');</script>";
         return false;
@@ -74,9 +75,11 @@ function gantiPass($data) {
     $result = mysqli_query($conn, "SELECT * FROM admin WHERE username='$username'");
 
     if( mysqli_num_rows($result) === 1 ) {
+        // Tangkap semua data dari username yang dimasukan
         $row = mysqli_fetch_assoc($result);
+        // Verify password tersebut dan cek apabila password lama sesuai lakukan ini
         if( password_verify($passwordLama, $row["password"]) ) {
-
+            // Enkripsi password baru
             $passwordBaru = password_hash($passwordBaru, PASSWORD_DEFAULT);
             $query = "UPDATE admin SET
                         password='$passwordBaru'
@@ -84,6 +87,7 @@ function gantiPass($data) {
             mysqli_query($conn, $query);
 
         }else {
+            // Jika password lama salah
             echo "<script>alert('Password lama salah!')</script>";
             return false;
         }
