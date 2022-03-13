@@ -1,20 +1,40 @@
 body {
-    background-color: #f6f6f2;
+  background-color: #f6f6f2;
 }
 
 nav {
-    background-color: #3880b7;
+  background-color: #3880b7;
 }
 
 .img-thumbnail {
-    border: 0;
+  border: 0;
 }
 
 .img {
-    display: flex;
-    justify-content: end;
+  display: flex;
+  justify-content: end;
 }
 
 footer {
-    background-color: #3880b7;
+  background-color: #3880b7;
+}
+
+.card-style {
+  position: relative;
+  transition: 0.5s;
+}
+
+.card-style::before {
+  content: "";
+  background-color: rgb(78, 115, 221);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 410px;
+  border-radius: 4px;
+}
+
+.card-style:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25) !important;
 }

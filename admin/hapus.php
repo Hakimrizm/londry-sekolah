@@ -4,11 +4,11 @@ include '../function/functions.php';
 $id = $_GET["id"];
 
 if( hapus($id) > 0 ) {
-    echo "<script>alert('Pelanggan berhasil dihapus!');
-        document.location.href = 'pelanggan.php';
-    </script>";
+  echo "<script>alert('Pelanggan berhasil dihapus!');
+    document.location.href = 'pelanggan.php';
+  </script>";
 }else {
-    echo "<script>alert('Pelanggan gagal dihapus!');</script>";
+  echo "<script>alert('Pelanggan gagal dihapus!');</script>";
 }
 
 ?>
