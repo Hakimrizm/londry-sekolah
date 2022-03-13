@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="card bg-light mt-3 mb-3">
-    <div class="card-heading p-4">
+    <div class="card-header p-4">
       <h4>Filter Laporan</h4>
     </div>
     <div class="card-body">
