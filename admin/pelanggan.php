@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-6">
             <form action="" method="post">
-              <input type="text" placeholder="Cari" class="form-control">
+              <input type="text" placeholder="Cari" class="form-control" id="keyword">
             </form>
         </div>
         <div class="col-6">
@@ -42,7 +42,7 @@
   <!-- Berhasil -->
 
   <div class="card mt-3 mb-3 shadow-sm">
-    <div class="card-body">
+    <div class="card-body search">
       <table class="table table-stiped table-hover">
         <thead>
           <tr>
@@ -73,5 +73,7 @@
     </div>
   </div>
 </div>
+
+<script src="../public/js/search.js"></script>
 
 <?php include 'layouts/footer.php'; ?>

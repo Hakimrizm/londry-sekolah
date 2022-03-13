@@ -173,6 +173,18 @@ function editTransaksi($data) {
   return mysqli_affected_rows($conn);
 }
 
+function cari($keyword) {
+  global $conn;
+
+  $result = "SELECT * FROM pelanggan 
+        WHERE pelanggan_nama LIKE '%$keyword%' OR
+        pelanggan_hp LIKE '%$keyword%' OR
+        pelanggan_alamat LIKE '%$keyword%'";
+
+  return query($result);
+
+}
+
 function register($data) {
   global $conn;
 
