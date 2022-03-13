@@ -51,9 +51,9 @@
             ?>
           </td>
           <td>
-            <a href="transaksi_invoice.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-info text-white" target="_blank">Invoice</a>
-            <a href="transaksi_edit.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-primary">Edit</a>
-            <a href="transaksi_hapus.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-danger">Batalkan</a>
+            <a href="transaksi_invoice.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-info text-white btn-sm" target="_blank">Invoice</a>
+            <a href="transaksi_edit.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-primary btn-sm">Edit</a>
+            <a href="transaksi_hapus.php?id=<?= $data["transaksi_id"]; ?>" class="btn btn-danger btn-sm">Batalkan</a>
           </td>
         </tr>
       <?php $i++; ?>

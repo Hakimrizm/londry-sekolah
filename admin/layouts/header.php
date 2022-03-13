@@ -68,7 +68,7 @@ $pelanggan = query("SELECT * FROM pelanggan");
       </li>
     </ul>
     <span class="navbar-text">
-        Hallo, <?= $_SESSION["username"]; ?>
+      Hallo, <strong><?= $_SESSION["username"]; ?></strong>
     </span>
     </div>
   </div>
