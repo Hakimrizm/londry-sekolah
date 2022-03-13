@@ -76,8 +76,8 @@ if( isset($_POST["simpan"]) ) {
           </table>
 
           <div class="mb-3">
-              <button type="submit" class="btn btn-success text-white" name="simpan">Simpan</button>
-              <a href="transaksi.php" class="btn btn-primary">Kembali</a>
+            <button type="submit" class="btn btn-success text-white" name="simpan">Simpan</button>
+            <a href="transaksi.php" class="btn btn-primary">Kembali</a>
           </div>
         </form>
       </div>
