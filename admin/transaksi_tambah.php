@@ -12,11 +12,11 @@ if( isset($_POST["simpan"]) ) {
 ?>
 
 <div class="container">
-  <div class="panel mb-3 mt-3 p-4 bg-light">
-    <div class="panel-heading">
+  <div class="card mb-3 mt-3 p-4 bg-light">
+    <div class="card-heading">
       <h4>Transaksi</h4>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <div class="col-md-8 col-md-offset-2">
         <form action="" method="post">
           <div class="mb-3">

@@ -29,7 +29,11 @@ $data = query("SELECT * FROM transaksi,pelanggan WHERE transaksi_id=$id AND tran
 
       <div class="panel-body">
         <?php foreach( $data as $row ): ?>
-          <p class="cetak btn btn-info text-white">Cetak</p>
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="cetak btn btn-info text-white">Cetak</button>
+          </div>
+
           <table class="table">
             <tr>
               <th width="20%">No. Invoice</th>
@@ -116,10 +120,10 @@ $data = query("SELECT * FROM transaksi,pelanggan WHERE transaksi_id=$id AND tran
 </div>
 
 <script>
-    const print = document.querySelector('.cetak');
-    print.addEventListener('click', function(){
-        window.print();
-    });
+  const print = document.querySelector('.cetak');
+  print.addEventListener('click', function(){
+    window.print();
+  });
 </script>
 </body>
 </html>

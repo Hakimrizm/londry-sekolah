@@ -17,7 +17,7 @@
     <div class="col-md-5">
       <div class="card">
         <div class="card-header mb-0" style="background-color: #6fb3b8;">
-            <h2 class="text-center" style="color: white;">Login</h2>
+          <h2 class="text-center" style="color: white;">Login</h2>
         </div>
         <div class="card-body">
           <form action="login.php" method="post">
@@ -32,7 +32,6 @@
                 }
               }
             ?>
-
             <div class="mb-3">
               <label for="username" class="form-label">Username</label>
               <input type="text" name="username" id="username" class="form-control" required autocomplete="off" placeholder="Username . . .">
