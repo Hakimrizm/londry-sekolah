@@ -2,7 +2,7 @@
 
 if( isset($_POST["tambah"]) ) {
   if( tambah($_POST) > 0 ) {
-    $_SESSION["pesan"] = 'diubah';
+    $_SESSION["pesan"] = 'Tambah';
     header("Location: pelanggan.php");
   }else {
     echo "<script>alert('Pelanggan baru gagal ditambahkan!');</script>";
